@@ -1,2 +1,2 @@
-# guided_tabata
-Python script for tabata timer with random exercises/
+# Guided Tabata with Timer
+Python script for tabata timer with random exercises.

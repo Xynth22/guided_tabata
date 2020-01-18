@@ -5,6 +5,8 @@ import winsound
 
 exercises = [line.rstrip('\n') for line in open('exercises.txt')]
 
+repetitions = 3
+numExercises = 5
 
 app = App(title="Tapata", width = 2000, height=400)
 
@@ -19,10 +21,16 @@ closeButton = PushButton(app, text =  "End Workout", align = "right", command = 
 frequency = 2500  # Set Frequency To 2500 Hertz
 duration = 50  # Set Duration To 1000 ms == 1 second
 
-for x in range(0,20):
+for x in range(0,(repetitions*numExercises) - 1):
     
-    #pick an exercise
-    i = randint(0,len(exercises)-1);
+    if (x / repetitions == round(x / repetitions)):
+        #pick an exercise
+        i = randint(0,len(exercises)-1)
+        #Play sound to notify of new exercise
+        winsound.Beep(1500, 150)
+        winsound.Beep(1500, 150)
+        winsound.Beep(3500, 150)
+
     
     #update text
     text.value = exercises[i]

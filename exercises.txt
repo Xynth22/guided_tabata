@@ -6,7 +6,7 @@ Sumo Squat
 Wall Sit
 Tricep Raise
 Lunge
-SQUAT 
+Squat Jumps
 Curtsy Lunge
 Calf raise
 Standard push-up
@@ -23,3 +23,4 @@ High Knee
 Butt Kicks
 Tick Tocks
 Heel Diggs
+Spidermans

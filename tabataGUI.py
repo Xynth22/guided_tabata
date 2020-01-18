@@ -21,35 +21,41 @@ closeButton = PushButton(app, text =  "End Workout", align = "right", command = 
 frequency = 2500  # Set Frequency To 2500 Hertz
 duration = 50  # Set Duration To 1000 ms == 1 second
 
-for x in range(0,(repetitions*numExercises) - 1):
-    
-    if (x / repetitions == round(x / repetitions)):
+for exer in range(0,numExercises):
         #pick an exercise
         i = randint(0,len(exercises)-1)
         #Play sound to notify of new exercise
         winsound.Beep(1500, 150)
         winsound.Beep(1500, 150)
         winsound.Beep(3500, 150)
+        text.value = exercises[i]
+        app.bg = "green"
+        app.update()
+        time.sleep(10); #extra time to setup next exercise
 
-    
-    #update text
-    text.value = exercises[i]
-    counter.value = x        
-    app.update()
+ 
+        for rep in range(0,repetitions):
+        
+            #update text
+            counter.value = str(exer) + " , " + str(rep)
+            app.bg = "green"
+            app.update()
 
-    #Rest Timer
-    time.sleep(7);
-    for y in range(1,3):
-        winsound.Beep(frequency, duration)
-        time.sleep(1);
-    winsound.Beep(frequency-500, 150)
-    
-    #Excercise timer
-    time.sleep(17);
-    for y in range(1,3):
-        winsound.Beep(frequency, duration)
-        time.sleep(1);    
-    winsound.Beep(frequency-500, 150)
+            #Rest Timer
+            time.sleep(7);
+            for y in range(1,3):
+                winsound.Beep(frequency, duration)
+                time.sleep(1);
+            winsound.Beep(frequency-500, 150)
+            app.bg = "red"
+            app.update()
+            #Excercise timer
+            time.sleep(17);
+            for y in range(1,3):
+                winsound.Beep(frequency, duration)
+                time.sleep(1);    
+            winsound.Beep(frequency-500, 150)
+        
      
 winsound.Beep(frequency+500, 700)
 app.display()

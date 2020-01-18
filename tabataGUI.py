@@ -2,11 +2,14 @@ from guizero import App, Text, PushButton
 from random import randint
 import time
 import winsound
+import webbrowser
+from datetime import datetime
+
 
 exercises = [line.rstrip('\n') for line in open('exercises.txt')]
 
 repetitions = 3
-numExercises = 5
+numExercises = 7
 
 app = App(title="Tapata", width = 2000, height=400)
 
@@ -37,7 +40,7 @@ for exer in range(0,numExercises):
         for rep in range(0,repetitions):
         
             #update text
-            counter.value = str(exer) + " , " + str(rep)
+            counter.value = str(exer+1) + " , " + str(rep+1)
             app.bg = "green"
             app.update()
 
@@ -58,5 +61,15 @@ for exer in range(0,numExercises):
         
      
 winsound.Beep(frequency+500, 700)
+app.bg = "green"
+text.value = "Workout Complete"
+app.update()
+
+day_of_year = datetime.today().timetuple().tm_yday
+
+f = open("workouts.txt", "a")
+f.write("\n%d , %d , %d" % (day_of_year,numExercises,repetitions))
+f.close()
+
 app.display()
     

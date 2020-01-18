@@ -11,7 +11,7 @@ numExercises = 5
 app = App(title="Tapata", width = 2000, height=400)
 
 text = Text(app, text="", size=200, align = "bottom")
-counter = Text(app, text="", size=24, align = "top")
+counter = Text(app, text="0 , 0", size=24, align = "top")
 
 def close_app():
     app.destroy()

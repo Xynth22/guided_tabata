@@ -34,7 +34,7 @@ for exer in range(0,numExercises):
         text.value = exercises[i]
         app.bg = "green"
         app.update()
-        time.sleep(10); #extra time to setup next exercise
+        time.sleep(10) #extra time to setup next exercise
 
  
         for rep in range(0,repetitions):
@@ -45,18 +45,18 @@ for exer in range(0,numExercises):
             app.update()
 
             #Rest Timer
-            time.sleep(7);
-            for y in range(1,3):
+            time.sleep(7)
+            for y in range(0,3):
                 winsound.Beep(frequency, duration)
-                time.sleep(1);
+                time.sleep(1)
             winsound.Beep(frequency-500, 150)
             app.bg = "red"
             app.update()
             #Excercise timer
-            time.sleep(17);
-            for y in range(1,3):
+            time.sleep(17)
+            for y in range(0,3):
                 winsound.Beep(frequency, duration)
-                time.sleep(1);    
+                time.sleep(1)   
             winsound.Beep(frequency-500, 150)
         
      

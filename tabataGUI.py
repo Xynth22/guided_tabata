@@ -40,7 +40,7 @@ def startupTimer():
 
 exerciseList = []
 
-def getExercise() #ensure no duplicates, TODO add logic to balance leg/core/arms
+def getExercise(): #ensure no duplicates, TODO add logic to balance leg/core/arms
     i = randint(0,len(exercises)-1)
     while (i in exerciseList):
         i = randint(0,len(exercises)-1)

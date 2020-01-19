@@ -25,8 +25,8 @@ closeButton = PushButton(app, text =  "End Workout", align = "right", command = 
 
 def tabataTimer(exer, reps, work):
     t = 0
-    if (work): tEnd=4
-    else: tEnd = 2
+    if (work): tEnd=20
+    else: tEnd = 10
     while (t < tEnd):
         time.sleep(1)
         t += 1
@@ -38,6 +38,17 @@ def tabataTimer(exer, reps, work):
 def startupTimer():
     time.sleep(10)
 
+exerciseList = []
+
+def getExercise() #ensure no duplicates, TODO add logic to balance leg/core/arms
+    i = randint(0,len(exercises)-1)
+    while (i in exerciseList):
+        i = randint(0,len(exercises)-1)
+    exerciseList.append(i)
+    return i
+
+
+
 
 
 #timerThread = threading.Thread(target=startupTimer)
@@ -46,10 +57,14 @@ def main():
 
     for exer in range(0,numExercises):
             
-            i = randint(0,len(exercises)-1)
-            text.value = exercises[i]
+            nxt = getExercise()
+            text.value = exercises[nxt]
             app.bg = "green"
             app.update()
+            #Play sound to notify of new exercise
+            winsound.Beep(1500, 150)
+            winsound.Beep(1500, 150)
+            winsound.Beep(3500, 150)
             time.sleep(10)
             for rep in range(0,repetitions):
                 counter.value = str(exer+1) + " , " + str(rep+1)

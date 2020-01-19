@@ -8,8 +8,8 @@ import threading
 
 exercises = [line.rstrip('\n') for line in open('exercises.txt')]
 
-repetitions = 2
-numExercises = 2
+repetitions = 3
+numExercises = 7
 
 frequency = 2500  # Set Frequency To 2500 Hertz
 duration = 50  # Set Duration To 1000 ms == 1 second
@@ -48,7 +48,9 @@ def main():
             
             i = randint(0,len(exercises)-1)
             text.value = exercises[i]
-            
+            app.bg = "green"
+            app.update()
+            time.sleep(10)
             for rep in range(0,repetitions):
                 counter.value = str(exer+1) + " , " + str(rep+1)
                 app.bg = "green"

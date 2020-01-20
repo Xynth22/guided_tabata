@@ -5,11 +5,12 @@ import winsound
 import webbrowser
 from datetime import datetime
 import threading
-
+from exercise_stats import plotStats
 exercises = [line.rstrip('\n') for line in open('exercises.txt')]
+plotStats()
 
 repetitions = 3
-numExercises = 7
+numExercises = 10
 
 frequency = 2500  # Set Frequency To 2500 Hertz
 duration = 50  # Set Duration To 1000 ms == 1 second
@@ -97,6 +98,8 @@ def main():
     f.close()
 
     app.display()
+    plotStats()
+
     
 if __name__ == '__main__':
     main()

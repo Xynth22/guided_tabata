@@ -2,10 +2,10 @@ from guizero import App, Text, PushButton
 from random import randint
 import time
 import winsound
-import webbrowser
 from datetime import datetime
 import threading
 from exercise_stats import plotStats
+
 exercises = [line.rstrip('\n') for line in open('exercises.txt')]
 plotStats()
 

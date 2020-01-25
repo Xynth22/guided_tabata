@@ -61,6 +61,7 @@ def main():
             nxt = getExercise()
             text.value = exercises[nxt]
             app.bg = "green"
+            counter.value = str(exer+1) + " , 1"
             app.update()
             #Play sound to notify of new exercise
             winsound.Beep(1500, 150)

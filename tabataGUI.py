@@ -54,11 +54,12 @@ def startupTimer():
 
 exerciseList = []
 
-def findNextCat():  
-    if (all(x >= minExerPerCat for x in numExerInCatComplete )):
+def findNextCat():
+    nxtCat = randint(0,numCats-1)
+    if (all(x >= minExerPerCat for x in numExerInCatComplete)):
         return nxtCat
     else:
-        while (numExerInCatComplete[x] < minExerPerCat):
+        while (numExerInCatComplete[nxtCat] >= minExerPerCat):
             nxtCat = randint(0,numCats-1)
         return nxtCat
     

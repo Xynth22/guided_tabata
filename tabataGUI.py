@@ -54,26 +54,20 @@ def startupTimer():
 
 exerciseList = []
 
-def findNextCat():
-    catIfNotDone = -1
-    for x in range(0,numCats-1):
-        if (numExerInCatComplete[x] <= numExerInCatComplete[x+1]):
-            catIfNotDone = x
-    if(catIfNotDone == -1 and (numExerInCatComplete[numCats] == numExerInCatComplete[numCat-1])):
-        catIfNotDone = 0
-    elif (catIfNotDone == -1):
-        catIfNotDone = numCats
-    if (catIfNotDone == 0 and numExerInCatComplete[0] >= minExerPerCat):
-        return randint(0,numCats)
+def findNextCat():  
+    if (all(x >= minExerPerCat for x in numExerInCatComplete )):
+        return nxtCat
     else:
-        return catIfNotDone
-
+        while (numExerInCatComplete[x] < minExerPerCat):
+            nxtCat = randint(0,numCats-1)
+        return nxtCat
+    
 def getExercise(): #ensure no duplicates, TODO add logic to balance leg/core/arms
     cat = findNextCat()
     numExerInCatComplete[cat] += 1
-    i = randint(catStarts[cat],catEnds[cat] - 1)
+    i = randint(int(catStarts[cat]),int(catEnds[cat]) - 1)
     while (i in exerciseList):
-        i = randint(catStarts[cat],catEnds[cat] - 1)
+        i = randint(int(catStarts[cat]),int(catEnds[cat]) - 1)
     exerciseList.append(i)
     return i
 

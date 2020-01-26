@@ -1,29 +1,35 @@
+Cardio Core Legs Arms
+0 9 18 25
 Mountain Climber
-Burpee
+Cardio Burpee
 Star Jumps
-Plank
-Sumo Squat
-Wall Sit
-Tricep Raise
-Lunge
-Squat Jumps
-Curtsy Lunge
-Calf raise
-Standard push-up
-Superman
-Diamond push-up
-Flutter kick
-Side plank
-Russian twist
-Bicycle
-Crunch
-Full Sit up
 Jumping Jacks
 High Knee
 Butt Kicks
 Tick Tocks
 Heel Diggs
-Spiderman
-Surrenders
-Plank up downs
 Plank Jacks
+Plank
+Superman
+Flutter kick
+Side plank
+Russian twist
+Bicycle
+Crunch
+Spiderman
+Full Sit up
+Sumo Squat
+Wall Sit
+Lunge
+Squat Jumps
+Curtsy Lunge
+Calf raise
+Surrenders
+Tricep Dip
+Standard push-up
+Diamond push-up
+Plank up downs
+Plank Tap
+Plank Reach
+Lateral Plank Walk
+Burpee w/ Pushup

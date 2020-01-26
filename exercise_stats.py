@@ -8,7 +8,7 @@ def plotStats():
 
     streak = np.array(days)
     
-    streak[0] = 0;
+    streak[0] = 0
 
     for x in range (1, streak.size):
         
@@ -24,9 +24,6 @@ def plotStats():
     plt.ylabel('Duration of Workout(mins)')
     plt.xlabel('Day of Year')
     plt.show()
-
-
-
 
 
 def calcMinsPerDay():
@@ -55,9 +52,4 @@ def calcMinsPerDay():
             minsTot[y[0][0]] += (exers[x]*reps[x]*30)/60
     return dayTot,minsTot
 
-
-    
-
-
-
-plotStats() #For testing
+#plotStats() #For testing

@@ -20,7 +20,7 @@ numExerInCatComplete = [0] * numCats
 exerciseList = []
 
 repetitions = 2
-numExercises = 10
+numExercises = 5
 
 minExerPerCat = int(numExercises / numCats)
 
@@ -34,7 +34,7 @@ counter = Text(app, text="0 , 0", size=24, align = "top")
 debug = Text(app, text="", size=24, align = "left")
 
 def shortPause():
-    time.sleep(1)
+    time.sleep(0.2)
 
 def findNextCat():
     nxtCat = randint(0,numCats-1)
@@ -87,7 +87,11 @@ def main():
             
         
     app.bg = "green"
-    text.value = "Workout Complete"
+    debug.value = ""
+    text.size = 18    
+    finalOutput = ["Workout Complete\n"] + [exercises[i] for i in exerciseList] + ["\n"] + [exerciseFile[0]] + ["\n"] + [numExerInCatComplete]
+    text.value = finalOutput
+    
     app.update()
 
  

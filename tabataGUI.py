@@ -106,10 +106,12 @@ def main():
                 tExercise.start()
                 tExercise.join()
             
-        
+    
     winsound.Beep(frequency+500, 700)
     app.bg = "green"
-    text.value = "Workout Complete"
+    text.size = 18    
+    finalOutput = ["Workout Complete\n"] + [exercises[i] for i in exerciseList] + ["\n"] + [exerciseFile[0]] + ["\n"] + [numExerInCatComplete]
+    text.value = finalOutput
     app.update()
 
     day_of_year = datetime.today().timetuple().tm_yday

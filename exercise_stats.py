@@ -14,6 +14,8 @@ def plotStats():
         
         if (mins[x] > 0 and mins[x-1] > 0):
             streak[x] = streak[x-1] + 1
+        elif (mins[x] == 0 and mins[x-1] == 0):
+            streak[x] = streak[x-1] - 1        
         else:
             streak[x] = 0
 

@@ -22,6 +22,21 @@ exerciseList = []
 repetitions = 2
 numExercises = 5
 
+paused = False
+start = threading.Event()
+stop = threading.Event()
+
+
+def togglePause():
+    
+    
+    
+    paused = not paused
+
+
+pauseButton = PushButton(app, text =  "Pause", align = "left", command = pause_app)
+
+
 minExerPerCat = int(numExercises / numCats)
 
 frequency = 2500  # Set Frequency To 2500 Hertz
